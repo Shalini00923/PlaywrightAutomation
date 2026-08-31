@@ -1,0 +1,14 @@
+{
+    "bose": {
+        "manufacturer": "Bose",
+        "productName": "Bose Soundlink Bluetooth Speaker III"
+    },
+    "hp": {
+        "manufacturer": "HP",
+        "productName": "HP Roar Mini Wireless Speaker"
+    },
+    "logitech": {
+        "manufacturer": "Logitech",
+        "productName": "Logitech X100 Speaker System - Wireless Speaker(s)"
+    }
+}
