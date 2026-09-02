@@ -18,7 +18,7 @@ class LoginPage{
      async enterUserName(username){
      await this.username.fill(username)
     }
-     async enterpassword(password){
+     async enterPassword(password){
      await this.password.fill(password)
     }
     
@@ -26,3 +26,5 @@ class LoginPage{
      await this.signIn.click()
     }
 }
+
+module.exports = { LoginPage };
