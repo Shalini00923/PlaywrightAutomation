@@ -8,6 +8,6 @@ test("Login Page", async({appPage, loginPage}) => {
         await loginPage.enterUserName(loginData.username);
         await loginPage.enterPassword(loginData.password);
         await loginPage.clickSignIn();
-
+        
 })
 

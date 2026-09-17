@@ -6,6 +6,7 @@ class HomePage {
         this.page= page;
         this.ourProduct = this.page.getByText('OUR PRODUCTS')
         this.speakers = this.page.locator('#speakersImg');
+        
 
 
     }
@@ -17,6 +18,8 @@ class HomePage {
     async clickSpeaker(){
         await this.speakers.click()
     }
+
+    
 }
 
 module.exports={HomePage};  

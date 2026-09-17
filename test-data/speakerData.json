@@ -1,14 +1,17 @@
 {
     "bose": {
         "manufacturer": "Bose",
-        "productName": "Bose Soundlink Bluetooth Speaker III"
+        "productName": "Bose Soundlink Bluetooth Speaker III",
+        "colors": ["BLACK", "GRAY", "RED", "TURQUOISE", "BLUE"]
     },
     "hp": {
         "manufacturer": "HP",
-        "productName": "HP Roar Mini Wireless Speaker"
+        "productName": "HP Roar Mini Wireless Speaker",
+        "colors": ["BLACK", "GRAY", "RED", "YELLOW", "BLUE", "PURPLE", "WHITE"]
     },
     "logitech": {
         "manufacturer": "Logitech",
-        "productName": "Logitech X100 Speaker System - Wireless Speaker(s)"
+        "productName": "Logitech X100 Speaker System - Wireless Speaker(s)",
+        "colors": ["BLACK"]
     }
 }

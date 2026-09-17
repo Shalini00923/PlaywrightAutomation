@@ -3,7 +3,10 @@ const {test: base} = require('@playwright/test')
 const { HomePage }  = require('../pages/HomePage')
 const { SpeakersPage } = require('../pages/SpeakerPage')
 const { ProductDetailsPage } = require('../pages/ProductDetailsPage');
-const { LoginPage } = require('../pages/LoginPage')
+const { CartPage } = require('../pages/CartPage');
+const { LoginPage } = require('../pages/LoginPage');
+const loginData = require('../test-data/loginData.json')
+
 
 const test = base.extend({
 
@@ -17,6 +20,16 @@ const test = base.extend({
         await use(loginPage);
     },
 
+    authenticatedPage: async({appPage,loginPage}, use) => {
+
+        await loginPage.login(
+            loginData.username,
+            loginData.password
+        );
+
+        await use(appPage);
+
+   },
     homePage: async ({ page }, use) => {
         const homePage = new HomePage(page);
         await use(homePage);
@@ -32,9 +45,23 @@ const test = base.extend({
     productDetailsPage: async ({page}, use) =>{
         const productDetailsPage = new ProductDetailsPage(page);
         await use(productDetailsPage)
-    }
+    },
+ 
+    cartPage: async({page}, use) =>{
+        const cartPage = new CartPage(page);
+        await use(cartPage)
 
+    },
 
+    cleanCart: async({authenticatedPage, homePage, cartPage}, use) => {
+
+        await cartPage.clickCart();
+        await cartPage.emptyCart();
+        await cartPage.clickHome();
+        
+        await use()
+
+    },
 });
 
 module.exports= {test};
